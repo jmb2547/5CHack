@@ -2,7 +2,7 @@
 <form action="/search">
     <div class="ui huge icon input search">
         <i class="search icon"></i>
-        <input name="location" type="text" placeholder="Search...">
+        <input name="beer" type="text" placeholder="Search Beer...">
     </div>
 </form>
 {% if businesses %}
@@ -12,6 +12,7 @@
 
     <div class="card">
         <div class="{% if search_page %} blurring dimmable {% endif %} image">
+<!--
             {% if search_page %}
             <div class="ui dimmer">
                 <div class="content">
@@ -26,7 +27,8 @@
                 </div>
             </div>
             {% endif %}
-            <img src="{{item.image_url}}">
+-->
+            <img src="{{item.image}}">
         </div>
 
         <div class="content">
@@ -37,7 +39,7 @@
         </div>
         <div class="extra content">
       <span class="center floated">
-        <img src="{{item.rating}}" alt=""/>
+<!--        <img src="{{item.rating}}" alt=""/>-->
       </span>
         </div>
     </div>
