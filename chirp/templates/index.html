@@ -1,8 +1,8 @@
-{% extends "base.html" %} {% block title %}Yelp!{% endblock %} {% block body %}
+{% extends "base.html" %} {% block title %}BeerGenius{% endblock %} {% block body %}
 <form action="/search">
     <div class="ui huge icon input search">
         <i class="search icon"></i>
-        <input name="beer" type="text" placeholder="Search Beer...">
+        <input name="beer" type="text" placeholder="Search Beers...">
     </div>
 </form>
 {% if businesses %}
@@ -12,7 +12,6 @@
 
     <div class="card">
         <div class="{% if search_page %} blurring dimmable {% endif %} image">
-<!--
             {% if search_page %}
             <div class="ui dimmer">
                 <div class="content">
@@ -23,11 +22,16 @@
                                 Save
                             </button>
                         </form>
+                        <form action="/predict" method="post">
+                            <input name="id" type="hidden" value="{{item.id}}"/>
+                            <button type="submit" class="ui inverted button">
+                                Predict
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
             {% endif %}
--->
             <img src="{{item.image}}">
         </div>
 
