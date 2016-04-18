@@ -11,7 +11,7 @@ from chirp import app
 
 BASE_URL = "http://api.brewerydb.com/v2/"
 SEARCH_URL = "search?"
-API_key = "b23f19cf8c791e60adbf1fd26fa892d6"
+
 
 
 yelp_api = YelpAPI(os.environ['YELP_KEY'], os.environ['YELP_SECRET'],
